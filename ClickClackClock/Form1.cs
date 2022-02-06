@@ -28,12 +28,13 @@ namespace ClickClackClock
             InitializeComponent();
         }
 
+
         #region tworzenie objektów
-        Czlowiek Ludzie = new Czlowiek(1);
+        Ludzie Ludzie = new Ludzie(1);
         Spichlez spichlez = new Spichlez(20);
         Rzeznia rzeznia = new Rzeznia(10);
         Tartak tartak = new Tartak(5);
-        Kamieniolom kamien = new Kamieniolom(5);
+        Kamien kamien = new Kamien(5);
         Magazyn magazyn = new Magazyn();
         ToolTip toolTip = new ToolTip();
         #endregion   
@@ -86,78 +87,75 @@ namespace ClickClackClock
 
         private void Rozbudoj_spichlez_Click(object sender, EventArgs e)
         {
-            if (spichlez.potrzebaBudo[spichlez.poziom] <= Ludzie.budowlancy &&
-                spichlez.potrzebaDesek[spichlez.poziom] <= tartak.ilosc_surowca &&
-                spichlez.potrzebaKamienia[spichlez.poziom] <= kamien.ilosc_surowca)
+            if (Spichlez.potrzebaBudo[spichlez.poziom - 1] <= Ludzie.budowlancy &&
+                Spichlez.potrzebaDesek[spichlez.poziom - 1] <= tartak.ilosc_surowca &&
+                Spichlez.potrzebaKamienia[spichlez.poziom - 1] <= kamien.ilosc_surowca)
             {
-                tartak.ilosc_surowca -= spichlez.potrzebaDesek[spichlez.poziom];
-                kamien.ilosc_surowca -= spichlez.potrzebaKamienia[spichlez.poziom];
+                tartak.ilosc_surowca -= Spichlez.potrzebaDesek[spichlez.poziom - 1];
+                kamien.ilosc_surowca -= Spichlez.potrzebaKamienia[spichlez.poziom - 1];
                 spichlez.poziom++;
             }
         }
 
         private void Rozbudoj_rzeznie_Click(object sender, EventArgs e)
         {
-            if (rzeznia.potrzebaBudo[rzeznia.poziom] <= Ludzie.budowlancy &&
-                rzeznia.potrzebaDesek[rzeznia.poziom] <= tartak.ilosc_surowca &&
-                rzeznia.potrzebaKamienia[rzeznia.poziom] <= kamien.ilosc_surowca)
+            if (Rzeznia.potrzebaBudo[rzeznia.poziom - 1] <= Ludzie.budowlancy &&
+                Rzeznia.potrzebaDesek[rzeznia.poziom - 1] <= tartak.ilosc_surowca &&
+                Rzeznia.potrzebaKamienia[rzeznia.poziom - 1] <= kamien.ilosc_surowca)
             {
-                tartak.ilosc_surowca -= rzeznia.potrzebaDesek[rzeznia.poziom];
-                kamien.ilosc_surowca -= rzeznia.potrzebaKamienia[rzeznia.poziom];
+                tartak.ilosc_surowca -= Rzeznia.potrzebaDesek[rzeznia.poziom - 1];
+                kamien.ilosc_surowca -= Rzeznia.potrzebaKamienia[rzeznia.poziom - 1];
                 rzeznia.poziom++;
             }
         }
 
         private void Rozbodoj_tartak_Click(object sender, EventArgs e)
         {
-            if (tartak.potrzebaBudo[tartak.poziom] <= Ludzie.budowlancy &&
-                tartak.potrzebaDesek[tartak.poziom] <= tartak.ilosc_surowca &&
-                tartak.potrzebaKamienia[tartak.poziom] <= kamien.ilosc_surowca)
+            if (Tartak.potrzebaBudo[tartak.poziom-1] <= Ludzie.budowlancy &&
+                Tartak.potrzebaDesek[tartak.poziom - 1] <= tartak.ilosc_surowca &&
+                Tartak.potrzebaKamienia[tartak.poziom - 1] <= kamien.ilosc_surowca)
             {
-                tartak.ilosc_surowca -= tartak.potrzebaDesek[rzeznia.poziom];
-                kamien.ilosc_surowca -= tartak.potrzebaKamienia[rzeznia.poziom];
+                tartak.ilosc_surowca -= Tartak.potrzebaDesek[tartak.poziom - 1];
+                kamien.ilosc_surowca -= Tartak.potrzebaKamienia[tartak.poziom - 1];
                 tartak.poziom++;
             }
         }
 
         private void Rozbudoj_kamien_Click(object sender, EventArgs e)
         {
-            if (kamien.potrzebaBudo[kamien.poziom] <= Ludzie.budowlancy &&
-                kamien.potrzebaDesek[kamien.poziom] <= tartak.ilosc_surowca &&
-                kamien.potrzebaKamienia[kamien.poziom] <= kamien.ilosc_surowca)
+            if (Kamien.potrzebaBudo[kamien.poziom - 1] <= Ludzie.budowlancy &&
+                Kamien.potrzebaDesek[kamien.poziom - 1] <= tartak.ilosc_surowca &&
+                Kamien.potrzebaKamienia[kamien.poziom - 1] <= kamien.ilosc_surowca)
             {
-                tartak.ilosc_surowca -= kamien.potrzebaDesek[rzeznia.poziom];
-                kamien.ilosc_surowca -= kamien.potrzebaKamienia[rzeznia.poziom];
+                tartak.ilosc_surowca -= Kamien.potrzebaDesek[kamien.poziom - 1];
+                kamien.ilosc_surowca -= Kamien.potrzebaKamienia[kamien.poziom - 1];
                 kamien.poziom++;
             }
         }
 
         private void Rozbudoj_tartak_Click(object sender, EventArgs e)
         {
-            if (tartak.potrzebaBudo[tartak.poziom] <= Ludzie.budowlancy &&
-                tartak.potrzebaDesek[tartak.poziom] <= tartak.ilosc_surowca &&
-                tartak.potrzebaKamienia[tartak.poziom] <= kamien.ilosc_surowca)
+            if (Tartak.potrzebaBudo[tartak.poziom] <= Ludzie.budowlancy &&
+                Tartak.potrzebaDesek[tartak.poziom] <= tartak.ilosc_surowca &&
+                Tartak.potrzebaKamienia[tartak.poziom] <= kamien.ilosc_surowca)
             {
-                tartak.ilosc_surowca -= tartak.potrzebaDesek[rzeznia.poziom];
-                kamien.ilosc_surowca -= tartak.potrzebaKamienia[rzeznia.poziom];
+                tartak.ilosc_surowca -= Tartak.potrzebaDesek[tartak.poziom];
+                kamien.ilosc_surowca -= Tartak.potrzebaKamienia[tartak.poziom];
                 tartak.poziom++;
             }
         }
 
         private void Rozbuduj_magazyn_Click(object sender, EventArgs e)
         {
-            if (magazyn.potrzebaBudo[magazyn.poziom] <= Ludzie.budowlancy &&
-                magazyn.potrzebaDesek[magazyn.poziom] <= tartak.ilosc_surowca &&
-                magazyn.potrzebaKamienia[magazyn.poziom] <= kamien.ilosc_surowca)
+            if (Magazyn.potrzebaBudo[magazyn.poziom - 1] <= Ludzie.budowlancy &&
+                Magazyn.potrzebaDesek[magazyn.poziom - 1] <= tartak.ilosc_surowca &&
+                Magazyn.potrzebaKamienia[magazyn.poziom - 1] <= kamien.ilosc_surowca)
             {
-                tartak.ilosc_surowca -= magazyn.potrzebaDesek[magazyn.poziom];
-                kamien.ilosc_surowca -= magazyn.potrzebaKamienia[magazyn.poziom];
+                tartak.ilosc_surowca -= Magazyn.potrzebaDesek[magazyn.poziom - 1];
+                kamien.ilosc_surowca -= Magazyn.potrzebaKamienia[magazyn.poziom - 1];
                 magazyn.poziom++;
 
-                spichlez.poziomMag++;
-                rzeznia.poziomMag++;
-                tartak.poziomMag++;
-                kamien.poziomMag++;
+                Magazyn.poziomMag++;
             }
         }
         #endregion

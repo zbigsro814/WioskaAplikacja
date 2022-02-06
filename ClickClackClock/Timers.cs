@@ -5,6 +5,8 @@ using System.Windows.Forms;
 
 namespace ClickClackClock
 {
+
+
     public partial class Form1 : Form
     {
         private void Zegar_1sek_Tick(object sender, EventArgs e)
@@ -51,6 +53,8 @@ namespace ClickClackClock
             txtKamrz.Text = Ludzie.kamien.ToString();
             txtKam.Text = kamien.ilosc_surowca.ToString();
 
+            Produkcja.pbUstaw<Spichlez>(pbZboz, spichlez);
+
             Ludzie.populacja = (Ludzie.ilosc + Ludzie.zbieraczy + Ludzie.lowcy
                 + Ludzie.budowlancy + Ludzie.zwiadowcy);
 
@@ -58,6 +62,8 @@ namespace ClickClackClock
             txtWolnych.Text = Ludzie.ilosc.ToString();
             // Ludzie_2.Text = Ludzie.ilosc_potencjalnych.ToString();
         }
+
+        
 
         private void timer_popul_Tick(object sender, EventArgs e)
         {
