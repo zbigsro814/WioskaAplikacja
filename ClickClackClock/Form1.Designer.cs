@@ -77,11 +77,15 @@ namespace ClickClackClock
             this.label13 = new System.Windows.Forms.Label();
             this.timer_drwale = new System.Windows.Forms.Timer(this.components);
             this.timer_kamien = new System.Windows.Forms.Timer(this.components);
+            this.pbMieso = new System.Windows.Forms.ProgressBar();
+            this.pbZboz = new System.Windows.Forms.ProgressBar();
+            this.pbKam = new System.Windows.Forms.ProgressBar();
+            this.pbDesk = new System.Windows.Forms.ProgressBar();
             this.SuspendLayout();
             // 
             // Dodaj_Czlowieka_btn
             // 
-            this.Dodaj_Czlowieka_btn.Location = new System.Drawing.Point(299, 377);
+            this.Dodaj_Czlowieka_btn.Location = new System.Drawing.Point(299, 410);
             this.Dodaj_Czlowieka_btn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Dodaj_Czlowieka_btn.Name = "Dodaj_Czlowieka_btn";
             this.Dodaj_Czlowieka_btn.Size = new System.Drawing.Size(94, 48);
@@ -103,7 +107,7 @@ namespace ClickClackClock
             // 
             // Wyslij_Polowac_btn
             // 
-            this.Wyslij_Polowac_btn.Location = new System.Drawing.Point(299, 160);
+            this.Wyslij_Polowac_btn.Location = new System.Drawing.Point(299, 176);
             this.Wyslij_Polowac_btn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Wyslij_Polowac_btn.Name = "Wyslij_Polowac_btn";
             this.Wyslij_Polowac_btn.Size = new System.Drawing.Size(94, 26);
@@ -114,7 +118,7 @@ namespace ClickClackClock
             // 
             // Wyslij_Budowac_btn
             // 
-            this.Wyslij_Budowac_btn.Location = new System.Drawing.Point(318, 254);
+            this.Wyslij_Budowac_btn.Location = new System.Drawing.Point(318, 284);
             this.Wyslij_Budowac_btn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Wyslij_Budowac_btn.Name = "Wyslij_Budowac_btn";
             this.Wyslij_Budowac_btn.Size = new System.Drawing.Size(94, 30);
@@ -125,7 +129,7 @@ namespace ClickClackClock
             // 
             // Wyslij_Zwiad_btn
             // 
-            this.Wyslij_Zwiad_btn.Location = new System.Drawing.Point(318, 288);
+            this.Wyslij_Zwiad_btn.Location = new System.Drawing.Point(318, 318);
             this.Wyslij_Zwiad_btn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Wyslij_Zwiad_btn.Name = "Wyslij_Zwiad_btn";
             this.Wyslij_Zwiad_btn.Size = new System.Drawing.Size(94, 30);
@@ -136,7 +140,7 @@ namespace ClickClackClock
             // 
             // Rozbudoj_spichlez
             // 
-            this.Rozbudoj_spichlez.Location = new System.Drawing.Point(52, 121);
+            this.Rozbudoj_spichlez.Location = new System.Drawing.Point(52, 137);
             this.Rozbudoj_spichlez.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Rozbudoj_spichlez.Name = "Rozbudoj_spichlez";
             this.Rozbudoj_spichlez.Size = new System.Drawing.Size(341, 24);
@@ -148,7 +152,7 @@ namespace ClickClackClock
             // 
             // Rozbudoj_rzeznie
             // 
-            this.Rozbudoj_rzeznie.Location = new System.Drawing.Point(52, 225);
+            this.Rozbudoj_rzeznie.Location = new System.Drawing.Point(52, 255);
             this.Rozbudoj_rzeznie.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Rozbudoj_rzeznie.Name = "Rozbudoj_rzeznie";
             this.Rozbudoj_rzeznie.Size = new System.Drawing.Size(341, 23);
@@ -179,7 +183,7 @@ namespace ClickClackClock
             // 
             // txtLowcy
             // 
-            this.txtLowcy.Location = new System.Drawing.Point(52, 160);
+            this.txtLowcy.Location = new System.Drawing.Point(52, 176);
             this.txtLowcy.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtLowcy.Name = "txtLowcy";
             this.txtLowcy.ReadOnly = true;
@@ -188,7 +192,7 @@ namespace ClickClackClock
             // 
             // txtBudo
             // 
-            this.txtBudo.Location = new System.Drawing.Point(52, 252);
+            this.txtBudo.Location = new System.Drawing.Point(52, 282);
             this.txtBudo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtBudo.Name = "txtBudo";
             this.txtBudo.ReadOnly = true;
@@ -200,7 +204,7 @@ namespace ClickClackClock
             this.Ilosc1.AutoSize = true;
             this.Ilosc1.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
             this.Ilosc1.ForeColor = System.Drawing.Color.MediumBlue;
-            this.Ilosc1.Location = new System.Drawing.Point(167, 330);
+            this.Ilosc1.Location = new System.Drawing.Point(167, 360);
             this.Ilosc1.Name = "Ilosc1";
             this.Ilosc1.Size = new System.Drawing.Size(161, 19);
             this.Ilosc1.TabIndex = 40;
@@ -222,7 +226,7 @@ namespace ClickClackClock
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
             this.label2.ForeColor = System.Drawing.Color.MediumBlue;
-            this.label2.Location = new System.Drawing.Point(167, 162);
+            this.label2.Location = new System.Drawing.Point(167, 178);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(87, 19);
             this.label2.TabIndex = 42;
@@ -233,7 +237,7 @@ namespace ClickClackClock
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
             this.label3.ForeColor = System.Drawing.Color.MediumBlue;
-            this.label3.Location = new System.Drawing.Point(167, 254);
+            this.label3.Location = new System.Drawing.Point(167, 284);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(127, 19);
             this.label3.TabIndex = 43;
@@ -241,7 +245,7 @@ namespace ClickClackClock
             // 
             // txtZwiad
             // 
-            this.txtZwiad.Location = new System.Drawing.Point(52, 279);
+            this.txtZwiad.Location = new System.Drawing.Point(52, 309);
             this.txtZwiad.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtZwiad.Name = "txtZwiad";
             this.txtZwiad.ReadOnly = true;
@@ -253,7 +257,7 @@ namespace ClickClackClock
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
             this.label4.ForeColor = System.Drawing.Color.MediumBlue;
-            this.label4.Location = new System.Drawing.Point(167, 282);
+            this.label4.Location = new System.Drawing.Point(167, 312);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(119, 19);
             this.label4.TabIndex = 45;
@@ -261,7 +265,7 @@ namespace ClickClackClock
             // 
             // txtPopulacja
             // 
-            this.txtPopulacja.Location = new System.Drawing.Point(52, 397);
+            this.txtPopulacja.Location = new System.Drawing.Point(52, 430);
             this.txtPopulacja.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtPopulacja.Name = "txtPopulacja";
             this.txtPopulacja.ReadOnly = true;
@@ -273,7 +277,7 @@ namespace ClickClackClock
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
             this.label5.ForeColor = System.Drawing.Color.MediumBlue;
-            this.label5.Location = new System.Drawing.Point(167, 400);
+            this.label5.Location = new System.Drawing.Point(167, 433);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(70, 19);
             this.label5.TabIndex = 47;
@@ -281,7 +285,7 @@ namespace ClickClackClock
             // 
             // txtWolnych
             // 
-            this.txtWolnych.Location = new System.Drawing.Point(52, 373);
+            this.txtWolnych.Location = new System.Drawing.Point(52, 406);
             this.txtWolnych.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtWolnych.Name = "txtWolnych";
             this.txtWolnych.ReadOnly = true;
@@ -293,7 +297,7 @@ namespace ClickClackClock
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
             this.label6.ForeColor = System.Drawing.Color.MediumBlue;
-            this.label6.Location = new System.Drawing.Point(167, 375);
+            this.label6.Location = new System.Drawing.Point(167, 408);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(126, 19);
             this.label6.TabIndex = 49;
@@ -304,7 +308,7 @@ namespace ClickClackClock
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
             this.label8.ForeColor = System.Drawing.Color.MediumBlue;
-            this.label8.Location = new System.Drawing.Point(167, 188);
+            this.label8.Location = new System.Drawing.Point(167, 218);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(179, 19);
             this.label8.TabIndex = 53;
@@ -312,7 +316,7 @@ namespace ClickClackClock
             // 
             // txtMieso
             // 
-            this.txtMieso.Location = new System.Drawing.Point(52, 186);
+            this.txtMieso.Location = new System.Drawing.Point(52, 216);
             this.txtMieso.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtMieso.Name = "txtMieso";
             this.txtMieso.ReadOnly = true;
@@ -324,7 +328,7 @@ namespace ClickClackClock
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
             this.label7.ForeColor = System.Drawing.Color.MediumBlue;
-            this.label7.Location = new System.Drawing.Point(167, 92);
+            this.label7.Location = new System.Drawing.Point(167, 108);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(146, 19);
             this.label7.TabIndex = 51;
@@ -332,7 +336,7 @@ namespace ClickClackClock
             // 
             // txtZboze
             // 
-            this.txtZboze.Location = new System.Drawing.Point(52, 90);
+            this.txtZboze.Location = new System.Drawing.Point(52, 106);
             this.txtZboze.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtZboze.Name = "txtZboze";
             this.txtZboze.ReadOnly = true;
@@ -359,7 +363,7 @@ namespace ClickClackClock
             // 
             // txtPotenc
             // 
-            this.txtPotenc.Location = new System.Drawing.Point(52, 330);
+            this.txtPotenc.Location = new System.Drawing.Point(52, 360);
             this.txtPotenc.Name = "txtPotenc";
             this.txtPotenc.Size = new System.Drawing.Size(110, 23);
             this.txtPotenc.TabIndex = 1;
@@ -369,7 +373,7 @@ namespace ClickClackClock
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
             this.label9.ForeColor = System.Drawing.Color.MediumBlue;
-            this.label9.Location = new System.Drawing.Point(569, 188);
+            this.label9.Location = new System.Drawing.Point(569, 218);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(91, 19);
             this.label9.TabIndex = 65;
@@ -377,7 +381,7 @@ namespace ClickClackClock
             // 
             // txtKam
             // 
-            this.txtKam.Location = new System.Drawing.Point(454, 186);
+            this.txtKam.Location = new System.Drawing.Point(454, 216);
             this.txtKam.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtKam.Name = "txtKam";
             this.txtKam.ReadOnly = true;
@@ -389,7 +393,7 @@ namespace ClickClackClock
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
             this.label10.ForeColor = System.Drawing.Color.MediumBlue;
-            this.label10.Location = new System.Drawing.Point(569, 92);
+            this.label10.Location = new System.Drawing.Point(569, 107);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(76, 19);
             this.label10.TabIndex = 63;
@@ -397,7 +401,7 @@ namespace ClickClackClock
             // 
             // Rozbodoj_tartak
             // 
-            this.Rozbodoj_tartak.Location = new System.Drawing.Point(454, 121);
+            this.Rozbodoj_tartak.Location = new System.Drawing.Point(454, 136);
             this.Rozbodoj_tartak.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Rozbodoj_tartak.Name = "Rozbodoj_tartak";
             this.Rozbodoj_tartak.Size = new System.Drawing.Size(341, 24);
@@ -409,7 +413,7 @@ namespace ClickClackClock
             // 
             // txtDeski
             // 
-            this.txtDeski.Location = new System.Drawing.Point(454, 90);
+            this.txtDeski.Location = new System.Drawing.Point(454, 105);
             this.txtDeski.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtDeski.Name = "txtDeski";
             this.txtDeski.ReadOnly = true;
@@ -429,7 +433,7 @@ namespace ClickClackClock
             // 
             // Rozbudoj_kamien
             // 
-            this.Rozbudoj_kamien.Location = new System.Drawing.Point(454, 225);
+            this.Rozbudoj_kamien.Location = new System.Drawing.Point(454, 255);
             this.Rozbudoj_kamien.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Rozbudoj_kamien.Name = "Rozbudoj_kamien";
             this.Rozbudoj_kamien.Size = new System.Drawing.Size(341, 23);
@@ -441,7 +445,7 @@ namespace ClickClackClock
             // 
             // Wyslij_kamien
             // 
-            this.Wyslij_kamien.Location = new System.Drawing.Point(701, 160);
+            this.Wyslij_kamien.Location = new System.Drawing.Point(701, 175);
             this.Wyslij_kamien.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Wyslij_kamien.Name = "Wyslij_kamien";
             this.Wyslij_kamien.Size = new System.Drawing.Size(125, 26);
@@ -461,7 +465,7 @@ namespace ClickClackClock
             // 
             // txtKamrz
             // 
-            this.txtKamrz.Location = new System.Drawing.Point(454, 160);
+            this.txtKamrz.Location = new System.Drawing.Point(454, 175);
             this.txtKamrz.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtKamrz.Name = "txtKamrz";
             this.txtKamrz.ReadOnly = true;
@@ -473,7 +477,7 @@ namespace ClickClackClock
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
             this.label11.ForeColor = System.Drawing.Color.MediumBlue;
-            this.label11.Location = new System.Drawing.Point(569, 162);
+            this.label11.Location = new System.Drawing.Point(569, 177);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(117, 19);
             this.label11.TabIndex = 61;
@@ -492,7 +496,7 @@ namespace ClickClackClock
             // 
             // Rozbuduj_magazyn
             // 
-            this.Rozbuduj_magazyn.Location = new System.Drawing.Point(454, 261);
+            this.Rozbuduj_magazyn.Location = new System.Drawing.Point(454, 291);
             this.Rozbuduj_magazyn.Name = "Rozbuduj_magazyn";
             this.Rozbuduj_magazyn.Size = new System.Drawing.Size(341, 41);
             this.Rozbuduj_magazyn.TabIndex = 66;
@@ -529,12 +533,44 @@ namespace ClickClackClock
             this.timer_kamien.Interval = 4000;
             this.timer_kamien.Tick += new System.EventHandler(this.timer_kamien_Tick);
             // 
+            // pbMieso
+            // 
+            this.pbMieso.Location = new System.Drawing.Point(52, 204);
+            this.pbMieso.Name = "pbMieso";
+            this.pbMieso.Size = new System.Drawing.Size(110, 10);
+            this.pbMieso.TabIndex = 69;
+            // 
+            // pbZboz
+            // 
+            this.pbZboz.Location = new System.Drawing.Point(52, 92);
+            this.pbZboz.Name = "pbZboz";
+            this.pbZboz.Size = new System.Drawing.Size(110, 10);
+            this.pbZboz.TabIndex = 70;
+            // 
+            // pbKam
+            // 
+            this.pbKam.Location = new System.Drawing.Point(454, 204);
+            this.pbKam.Name = "pbKam";
+            this.pbKam.Size = new System.Drawing.Size(110, 10);
+            this.pbKam.TabIndex = 71;
+            // 
+            // pbDesk
+            // 
+            this.pbDesk.Location = new System.Drawing.Point(454, 92);
+            this.pbDesk.Name = "pbDesk";
+            this.pbDesk.Size = new System.Drawing.Size(110, 10);
+            this.pbDesk.TabIndex = 72;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkCyan;
-            this.ClientSize = new System.Drawing.Size(1199, 436);
+            this.ClientSize = new System.Drawing.Size(1199, 526);
+            this.Controls.Add(this.pbDesk);
+            this.Controls.Add(this.pbKam);
+            this.Controls.Add(this.pbZboz);
+            this.Controls.Add(this.pbMieso);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.pb1);
             this.Controls.Add(this.Rozbuduj_magazyn);
@@ -632,6 +668,10 @@ namespace ClickClackClock
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Timer timer_drwale;
         private System.Windows.Forms.Timer timer_kamien;
+        private System.Windows.Forms.ProgressBar pbMieso;
+        private System.Windows.Forms.ProgressBar pbZboz;
+        private System.Windows.Forms.ProgressBar pbKam;
+        private System.Windows.Forms.ProgressBar pbDesk;
     }
 }
 
